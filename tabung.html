@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JobSheet 7.2</title>
+	<script type="text/javascript" Language="javascript">
+		function hitung() {
+			var r = parseInt(document.getElementById('r').value);
+			
+			var hasil = 2* 3.14 * r * r ;
+			document.getElementById("hasil").value=hasil;
+		}
+	</script>
+</head>
+<body>
+	<form> Menghitung Luas Tabung<br>
+		<input type="number" id="r" placeholder="Masukan Nilai Jari-jari"><br>
+		
+		<input type="number" id="hasil" placeholder="hasil Luas Tabung" disabled><br>
+		<input type="button" id="button" value="Hitung" onclick="hitung()">
+	</form><br>
+	<br><hr><a href="index_jobsheet.html"><h3>Back</h3></a><br><br>
+</body>
+</html>

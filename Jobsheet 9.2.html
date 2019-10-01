@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jobsheet 9.2</title>
+	<script type="text/javascript">
+
+		function indeksprestasi() {
+			var quis = parseFloat(document.page.quis.value);
+			var tugas = parseFloat(document.page.tugas.value);
+			var uts = parseFloat(document.page.uts.value);
+			var uas = parseFloat(document.page.uas.value);
+			var ip="";
+			var ket="";
+			var total = (0.10*quis)+(0.20*tugas)+(0.30*uts)+(0.40*uas);
+		
+
+				if ((total >= 90) && (total <= 100)) {
+					ip="A";
+					ket="Sangat Baik"
+				}
+				else if ((total >= 80) && (total < 90)) {
+					ip="B";
+					ket="Baik"
+				}
+				else if ((total >= 70) && (total < 80)) {
+					ip="C";
+					ket="Sedang"
+				}
+				else if ((total >= 60) && (total < 70)){
+					ip="D";
+					ket="Jelek"
+				}
+				else if ((total >= 50) && (total < 60)){
+					ip="E";
+					ket="Sangat Jelek"
+				}
+				else if(total < 50){
+            	 	ip="F";
+            	 	ket="Tidak Pintar"
+            	 }	
+				
+				 document.page.ip.value=ip;
+            	 document.page.Ket.value=ket;
+            	}
+	</script>
+</head>
+<body bgcolor=steelblue>  
+        <form name="page">
+           
+                <table border="1" cellpadding="2" cellspacing="0" align="center" width="70%">
+                    <tr>
+                        <td width="100%" colspan="4"><h2 align="center">Menghitung Indeks Prestasi</h2> </td> 
+                    </tr>
+                    <tr>
+                        <td width="25%" align="center">Quis (10%) <input type="text" size="10" name="quis"></td>
+                        <td width="25%" align="center">Tugas (20%)<input type="text" size="10" name="tugas"></td>
+                        <td width="25%" align="center">UTS (30%)  <input type="text" size="10" name="uts"></td>
+                        <td width="25%" align="center">UAS (40%) <input type="text" size="10" name="uas"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center">
+                        <input  type="button" value="indeks prestasi" onclick="indeksprestasi()">
+                        <input  type="reset" value="ulang">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" width="50%" align="center">
+                        Indeks Prestasi <input type="text" size="10" name="ip" disabled>
+                        Keterangan <input type="text" size="20" name="Ket" disabled>
+                    	</td>
+                    </tr>
+                </table>
+                <br><hr><a href="index_jobsheet.html"><h3>Back</h3></a><br><br>
+    </body>
+</html>

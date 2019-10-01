@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JobSheet 7.2</title>
+	<script type="text/javascript" Language="javascript">
+		var r;
+		var luas;
+
+		var rtb;
+		var t;
+
+
+		function lingkaran() {
+			r = parseInt(document.getElementById('ir').value);
+			
+			luas = 3.14 * r * r ;
+			document.getElementById('luaslingkaran').value=luas;
+		}
+		function tabung() {
+			rtb =parseInt(document.getElementById("irtb").value);
+			t =parseInt(document.getElementById("it").value);
+			luastb = 2 * 3.14 * rtb * (rtb+t);
+			document.getElementById('luastb').value = luastb;
+
+		}
+			function ratarata() {
+			dat1 = parseFloat(document.getElementById("ipt_d1").value);
+			dat2 = parseFloat(document.getElementById("ipt_d2").value);
+			dat3 = parseFloat(document.getElementById("ipt_d3").value);
+			dat4 = parseFloat(document.getElementById("ipt_d4").value);
+			dat5 = parseFloat(document.getElementById("ipt_d5").value);
+			dat6 = parseFloat(document.getElementById("ipt_d6").value);
+			dat7 = parseFloat(document.getElementById("ipt_d7").value);
+			dat8 = parseFloat(document.getElementById("ipt_d8").value);
+			dat9 = parseFloat(document.getElementById("ipt_d9").value);
+			dat10 = parseFloat(document.getElementById("ipt_d10").value);
+			jumdat=dat1+dat2+dat3+dat4+dat5+dat6+dat7+dat8+dat9+dat10;
+			rerata=jumdat/10;
+			document.getElementById('opt_jumdat').value = jumdat;
+			document.getElementById('opt_rerata').value = rerata;
+			}
+	</script>
+</head>
+<body>
+	<table align="center" bgcolor="gray" >
+		<thead bgcolor="white"><tr><th>Luas Lingkaran</th>/</tr></thead>
+		<tbody>
+			<tr><td>Masukan Nilai Jari Jari</td></tr>
+			<tr><td><input type="number" id="ir"></td></tr>
+			<tr><td><button onclick="lingkaran()">Hitung</button></td></tr>
+
+		</tbody>
+		<tfoot>
+			<tr><td>Hasil Luas Lingkaran</td></tr>
+			<tr><td><input type="number" id="luaslingkaran" disabled=""></td></tr>
+		</tfoot>
+	</table><hr>
+	<table align="center" bgcolor="grey">
+		<thead bgcolor="white"><tr><th>Luas Tabung</th></tr></thead>
+		<tbody>
+			<tr><td>Masukan Nilai Jari Jari</td></tr>
+			<tr><td><input type="number" id="irtb"></td></tr>
+			<tr><td>Masukan Nilai Tinggi</td></tr>
+			<tr><td><input type="number" id="it"></td></tr>
+			<tr><td><button onclick="tabung()">Hitung</button></td></tr>
+
+		</tbody>
+		<tfoot>
+			<tr><td>Hasil Luas Lingkaran</td></tr>
+			<tr><td><input type="number" id="luastb" disabled=""></td></tr>
+		</tfoot>
+	</table><hr>
+	<table bgcolor="gray" align="center">
+		<thead bgcolor="gray">
+			<tr>
+				<th>Rata Rata</th>
+			</tr>
+			<tr>
+				<th>Masukan Angka</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Data 1 :</td>
+				<td><input type="text" id="ipt_d1"></td>
+			</tr>
+			<tr>
+				<td>Data 2 :</td>
+				<td><input type="text" id="ipt_d2"></td>
+			</tr>
+			<tr>
+				<td>Data 3 :</td>
+				<td><input type="text" id="ipt_d3"></td>
+			</tr>
+			<tr>
+				<td>Data 4 :</td>
+				<td><input type="text" id="ipt_d4"></td>
+			</tr>
+			<tr>
+				<td>Data 5 :</td>
+				<td><input type="text" id="ipt_d5"></td>
+			</tr>
+			<tr>
+				<td>Data 6 :</td>
+				<td><input type="text" id="ipt_d6"></td>
+			</tr>
+			<tr>
+				<td>Data 7 :</td>
+				<td><input type="text" id="ipt_d7"></td>
+			</tr>
+			<tr>
+				<td>Data 8 :</td>
+				<td><input type="text" id="ipt_d8"></td>
+			</tr>
+			<tr>
+				<td>Data 9 :</td>
+				<td><input type="text" id="ipt_d9"></td>
+			</tr>
+			<tr>
+				<td>Data 10 :</td>
+				<td><input type="text" id="ipt_d10"></td>
+			</tr>
+			<tr>
+				<td><button onclick="ratarata()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Jumlah data :</td>
+				<td><input type="text" id="opt_jumdat" disabled></td>
+			</tr>
+			<tr>
+				<td>Rata Rata :</td>
+				<td><input type="text" id="opt_rerata" disabled></td>
+			</tr>
+
+		</tfoot>
+	</table>
+	<br><hr><a href="index_jobsheet.html"><h3>Back</h3></a><br><br>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style type="text/css">
+		fieldset{
+			width: 600px;
+			background-color: steelblue;
+		}
+		legend{
+			font-family: ComicSansMS;
+			font-size: 25px;
+			background-color: salmon;}
+		input.button{
+			background: skyblue;
+			border: 1px white;
+			font-family: verdana;
+			margin: 5px;
+		}
+		input.button:hover{
+			border: 2px dashed blue;
+			cursor: pointer;
+
+		}
+		input.button:active{
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>Universitas Zeeeber Ori</legend>
+		<div> Nama :<br>
+		<input type="text" name="nama"></div>
+		<div> Asal Sekolah :<br>
+			<input type="text" name="asal">
+		</div><br>
+		<form method="POST" action="#">
+			<input type="radio" id="rb1" name="rb" value="Pria">
+			<label for="rb1">Pria</label><br>	
+			<input type="radio" id="rb2" name="rb" value="Wanita">
+			<label for="rb2">Wanita</label><br>	
+
+		</form><br>
+		<div>Agama :<br>
+			<select >
+				<option>--PILIH--</option>
+				<option>Islam</option>
+				<option>Kriten</option>
+				<option>Katholik</option>
+				<option>Hindu</option>
+				<option>Budha</option>
+				<option>Kongkhuchu</option>
+				<option>Yahudi</option>
+			</select>
+		</div><br>
+		<div>
+			Nilai :<br>
+			<input type="text" name="Nilai" placeholder="Matematika">
+			<input type="text" name="Nilai" placeholder="Bahasa Indonesia">
+			<input type="text" name="Nilai" placeholder="Bahasa Inggris">
+		</div>
+		<br>
+		<div>
+			Pilih Fakultas<br>
+			<select>
+				<option>--PILIH--</option>
+				<option>Fakultas Ilmu Pendidikan</option>
+				<option>Fakultas Pendidikan Bahasa dan Seni</option>
+				<option>Fakultas Pendidikan Olahraga dan Kesehatan</option>
+				<option>Fakultas Pendidikan Teknik dan Kejuruan</option>
+				<option>Fakultas Pendidikan Matematika dan IPA</option>
+				<option>Fakultas Pendidikan Ilmu Pengetahuan Sosial</option>
+			<option>Fakultas Pendidikan Ekonomi dan Bisnis</option>
+			</select><br>
+		</div><br>
+		<div>
+			<input type="checkbox" name="cb" id="ya" value="setuju"><label for="ya">Setuju</label>
+		</div><br>
+		<div>
+			<input type="submit" name="submit" value="Submit" class="button">
+			<input type="reset" name="reset" class="button" value="Reset">
+		</div>
+	</fieldset>
+	<br><hr><a href="index_jobsheet.html"><h3>Back</h3></a><br><br>
+</body>
+</html>

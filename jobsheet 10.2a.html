@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function password(){
+
+				var a = prompt("Masukan Password Dengan Benar");
+				var b = 12345 ;
+				var i = 1;
+
+				if (a==b) {
+					alert("Yaa Password Benar");
+
+				}else{
+					do{
+						var a = prompt("Ahh :( Password Salah Coba Cek Lagi");
+						i++
+						if(a==b){
+							alert("Wow Password Benar")
+						}
+					}while( a != b && i<3)
+				}
+				if(i = 3 && a !=b){
+					alert("Yah Maap Kesempatan Anda Sudah Habis");
+				}
+		}
+
+
+
+
+
+	</script>
+</head>
+<body bgcolor="steelblue"><center>
+	<h1 style="color: white" font-family="ComicSansMS">Silahkan Password Anda</h1>
+	<input type="button" value="Password"  id="pass" onclick="password()">
+</center>
+
+</body>
+</html>
