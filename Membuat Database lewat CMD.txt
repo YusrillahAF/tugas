@@ -1,0 +1,18 @@
+	Membuka MySql
+- cd c:/xampp/mysql/bin
+- mysql -u root -p
+
+	Create Database CMD
+- create database nama_database;
+
+	Untuk memanggil/Menggunakan Database tersebut
+- use nama_database;
+
+	Untuk membuat Table di Dalam Database tersebut
+- create table `t_jns_brg`(`id_jns` int(11) auto_increment not null, `jenis` varchar(100) not null, primary key(`id_jns`));
+
+	Untuk Melihat Table di Dalam Database tersebut
+- show tables;
+
+	Untuk melihat isi dalam Table
+- describe nama_database;
